@@ -110,7 +110,7 @@ width: 20%;
 width: 1%;
 }
 tbody tr {
-border-bottom: 1px solid #ddd; /* Add horizontal line between rows */
+border-bottom: 1px solid #ddd; 
 }
 .total-section h4{
 text-align: end;
