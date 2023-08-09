@@ -1,38 +1,151 @@
-.App {
-  text-align: center;
+
+@import url('https://fonts.googleapis.com/css2?family=Victor+Mono&display=swap');
+
+body{
+  font-family: 'Victor Mono', monospace;
+  background-color: currentColor;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main-container{
+
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.left-content{
+padding: 10px;
+background-color: rgb(233, 233, 245);
+border-radius: 15px;
+margin: 15px;
+
+}
+.right-content{
+padding: 10px;
+background-color: rgb(232, 228, 246);
+border-radius: 15px;
+margin: 15px;
+width: 15%;
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@media only screen and (min-width: 10px) and (max-width: 1178.40px){
+  .right-content{
+    padding: 10px;
+    background-color: rgb(232, 228, 246);
+    border-radius: 15px;
+    margin: 15px;
+    width: 100%;
+    
+    }
+}
+.bill-details{
+display: flex; 
+flex-direction: row ;
+justify-content:space-between;
 }
 
-.App-link {
-  color: #61dafb;
+
+.table-responsive {
+width: 100%;
+margin-bottom: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.table-responsive th,
+.table-responsive td {
+padding: 10px;
+border-bottom: 1px dashed #ccc;
 }
+
+.table-responsive th {
+background-color: #f2f2f2;
+font-weight: bold;
+}
+
+.btn {
+padding: 8px 16px;
+border: none;
+background-color: #007bff;
+color: #fff;
+cursor: pointer;
+}
+
+.btn-primary {
+background-color: #007bff;
+}
+
+.btn-primary:hover {
+background-color: #0056b3;
+}
+
+/* Style for the Add Item button */
+.add-item-btn {
+margin-top: 10px;
+}
+
+/* Optional: Adjust table column widths as needed */
+.table-responsive th:nth-child(1),
+.table-responsive td:nth-child(1) {
+width: 50%;
+}
+
+.table-responsive th:nth-child(2),
+.table-responsive td:nth-child(2) {
+width:10%;
+}
+
+.table-responsive th:nth-child(3),
+.table-responsive td:nth-child(3) {
+width: 12%;
+}
+
+.table-responsive th:nth-child(4),
+.table-responsive td:nth-child(4) {
+width: 20%;
+}
+.table-responsive th:nth-child(5),
+.table-responsive td:nth-child(5) {
+width: 1%;
+}
+tbody tr {
+border-bottom: 1px solid #ddd; /* Add horizontal line between rows */
+}
+.total-section h4{
+text-align: end;
+} 
+
+.titleName{
+width: 10px;
+max-width: 75%;
+font-size: larger;
+font-weight: bolder;
+}
+.title{
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+}
+select{
+padding: 8px ;
+width: 100%;
+border-radius: 5px;
+border: none;
+}
+
+hr {
+border: 1.5px dashed black;
+opacity: 100%;
+margin: 10px auto;
+}
+
+.printable {
+background: none;
+font-family: 'Victor Mono', monospace;
+}
+
+body input {
+border: none;
+}
+
