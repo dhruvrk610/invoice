@@ -99,7 +99,7 @@ const App = () => {
    const cgstAmount = (totalAmount * cgstRate) / 100;
    const sgstAmount = (totalAmount * sgstRate) / 100;
    const discountAmount = (totalAmount * discountRate) / 100;
-   const grandTotal = totalAmount + gstAmount + cgstAmount + sgstAmount - discountAmount;
+   const grandTotal = totalAmount + gstAmount - discountAmount;
 
    const formattedTotalAmount = totalAmount.toFixed(2).toLocaleString();
    const formattedGstAmount = gstAmount.toFixed(2).toLocaleString();

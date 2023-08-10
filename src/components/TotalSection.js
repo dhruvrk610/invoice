@@ -8,13 +8,13 @@ const TotalSection = ({ formattedTotalAmount, formattedGstAmount, formattedCgstA
                 <h4>Total Amount: {formattedTotalAmount} <span dangerouslySetInnerHTML={{ __html: currency }} /></h4>
               </div>
               <div>
-                <h4>GST (18%): {formattedGstAmount} <span dangerouslySetInnerHTML={{ __html: currency }} /></h4>
-              </div>
-              <div>
                 <h4>CGST (9%): {formattedCgstAmount} <span dangerouslySetInnerHTML={{ __html: currency }} /></h4>
               </div>
               <div>
                 <h4>SGST (9%): {formattedSgstAmount} <span dangerouslySetInnerHTML={{ __html: currency }} /></h4>
+              </div>
+              <div>
+                <h4>Total GST (18%): {formattedGstAmount} <span dangerouslySetInnerHTML={{ __html: currency }} /></h4>
               </div>
               <div>
                 <h4>Discount ({discountRate}%): {formatteddiscountAmount} <span dangerouslySetInnerHTML={{ __html: currency }} /></h4>
