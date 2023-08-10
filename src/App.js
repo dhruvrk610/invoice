@@ -27,6 +27,12 @@ const App = () => {
    const [titleValue, setTitleValue] = useState('INVOICE')
    const [currency, setCurrency] = useState('₹');
    const [noteText, setNoteText] = useState('Thank You !!!');
+   const [applyIGST, setApplyIGST] = useState(false);
+
+   const handleApplyIGSTChange = (event) => {
+     setApplyIGST(event.target.checked);
+   };
+   
 
    const handleCurrencyChange = (event) => {
       setCurrency(event.target.value);
@@ -200,21 +206,21 @@ const App = () => {
 
 
    };
-
+   
    return (
       <>
          <div className='main-container'>
             <div className='left-content'>
-                  <TitleInput titleValue={titleValue} setTitleValue={setTitleValue} />
-               
-                  <div className='header container' style={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap' }}>
-                     <div>
-                        <DateInput currentDate={currentDate} />
-                        <DueDateInput />
-                     </div>
-                     <InvoiceNumber invoiceNumber={invoiceNumber} />
+               <TitleInput titleValue={titleValue} setTitleValue={setTitleValue} />
+
+               <div className='header container' style={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap' }}>
+                  <div>
+                     <DateInput currentDate={currentDate} />
+                     <DueDateInput />
                   </div>
-             
+                  <InvoiceNumber invoiceNumber={invoiceNumber} />
+               </div>
+
                <hr />
                <div className='bill-details'>
                   <div className='container'>
@@ -235,6 +241,7 @@ const App = () => {
                   formattedGrandTotal={formattedGrandTotal}
                   currency={currency}
                   discountRate={discountRate}
+                  applyIGST={applyIGST}
                />
                <NotesSection noteText={noteText} setNoteText={setNoteText} />
             </div>
@@ -266,6 +273,14 @@ const App = () => {
                      value={discountRate}
                      onChange={handleDiscountRateChange}
                   />
+               </div>
+               <div class="mb-3 container">
+                  <div class="input-group mb-2">
+                     <span class="input-group-text">
+                        <input class="form-check-input m-0" type="checkbox" checked={applyIGST} onChange={handleApplyIGSTChange} />
+                     </span>
+                     <input type="text" class="form-control" value="IGST applied" autocomplete="off" style={{fontWeight:'bold'}} />
+                  </div>
                </div>
 
             </div>
