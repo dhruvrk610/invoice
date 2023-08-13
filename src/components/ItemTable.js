@@ -183,7 +183,7 @@ const ItemTable = ({ items, handleChange, handleRemoveItem, currency, handleAddI
                 ))}
               </tbody>
             </table>
-            <button type='button' className='btn btn-primary my-2' onClick={handleAddItem}>Add Item</button>
+            <button type='button' className='btn btn-primary my-2 mx-1' onClick={handleAddItem}>Add Item</button>
           </div>
     );
 };

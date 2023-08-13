@@ -5,13 +5,28 @@ body{
   font-family: 'Victor Mono', monospace;
   background-color: currentColor;
 }
-
+@media only screen and (min-width: 10px) and (max-width: 1178.40px){
+  body{
+    font-family: 'Victor Mono', monospace;
+    background-color: currentColor;
+    font-size: 10px;
+  }
+}
 .main-container{
 
 display: flex;
-flex-wrap: wrap;
 justify-content: center;
 
+}
+
+@media only screen and (min-width: 10px) and (max-width: 1178.40px){
+  .main-container{
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+    }
 }
 
 .left-content{
@@ -61,6 +76,13 @@ justify-content:space-between;
 width: 100%;
 margin-bottom: 20px;
 }
+@media only screen and (min-width: 10px) and (max-width: 1178.40px){
+  .table-responsive {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 0;
+    }
+  }
 
 .table-responsive th,
 .table-responsive td {
@@ -104,14 +126,14 @@ margin-top: 10px;
 
 .table-responsive th:nth-child(1),
 .table-responsive td:nth-child(1) {
-width: 50%;
+width: 40%;
 }
 
 
 
 .table-responsive th:nth-child(2),
 .table-responsive td:nth-child(2) {
-width:12%;
+width:8%;
 }
 
 .table-responsive th:nth-child(3),
@@ -121,10 +143,18 @@ width: 15%;
 
 .table-responsive th:nth-child(4),
 .table-responsive td:nth-child(4) {
-width: 20%;
+width: 10%;
 }
 .table-responsive th:nth-child(5),
 .table-responsive td:nth-child(5) {
+width: 10%;
+}
+.table-responsive th:nth-child(6),
+.table-responsive td:nth-child(6) {
+width: 10%;
+}
+.table-responsive th:nth-child(7),
+.table-responsive td:nth-child(7) {
 width: 1%;
 }
 tbody tr {
